@@ -1,113 +1,128 @@
-# Customer Churn Prediction using Machine Learning
+# Market Basket Analysis Using Apriori Algorithm
 
 ## Project Overview
 
-Customer Churn Prediction is a machine learning project that predicts whether a customer is likely to leave a service.
+This project focuses on **Market Basket Analysis**, a data mining technique used to identify relationships and purchasing patterns among products in retail transaction data.
 
-The project uses customer information such as tenure, contract type, monthly charges, payment method, and other service details to identify customers who are at higher risk of churn.
+The **Apriori Algorithm** is used to discover frequently purchased product combinations and generate association rules. These patterns can help businesses understand customer buying behavior and improve product recommendations, cross-selling, promotions, and inventory planning.
 
 ## Objective
 
-* Analyze customer data to identify churn patterns.
-* Perform Exploratory Data Analysis (EDA).
-* Build classification models to predict customer churn.
-* Compare different machine learning models using Accuracy, Recall, and ROC-AUC.
-* Identify important factors that contribute to customer churn.
-
-## Dataset
-
-The project uses the **Telco Customer Churn** dataset.
-
-The dataset contains information about:
-
-* Customer demographics
-* Account information
-* Services subscribed
-* Contract details
-* Payment methods
-* Monthly and total charges
-* Customer churn status
+* Analyze retail transaction data to identify purchasing patterns.
+* Find frequently purchased products and product combinations.
+* Apply the Apriori algorithm to generate frequent itemsets.
+* Generate association rules using support, confidence, and lift.
+* Visualize important product associations.
+* Derive useful business insights from customer transactions.
 
 ## Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Scikit-learn
-* XGBoost
-* Jupyter Notebook
+* **Python**
+* **Pandas**
+* **Matplotlib**
+* **Mlxtend**
+* **Google Colab**
+* **Jupyter Notebook**
+
+## Dataset
+
+The project uses retail transaction data containing information about customer invoices, products, quantities, prices, and transaction details.
+
+The data was cleaned and transformed into a transaction-based format suitable for applying the Apriori algorithm.
 
 ## Project Workflow
 
-1. Data Collection
-2. Data Cleaning and Preprocessing
-3. Exploratory Data Analysis
-4. Feature Encoding
-5. Train-Test Split
-6. Feature Scaling
-7. Model Training
-8. Model Evaluation
-9. Feature Importance Analysis
-10. Model Comparison
+1. Import the required Python libraries.
+2. Load the retail transaction dataset.
+3. Understand the structure and characteristics of the data.
+4. Clean the transaction data.
+5. Perform Exploratory Data Analysis (EDA).
+6. Convert transaction data into a basket format.
+7. Apply the Apriori algorithm.
+8. Identify frequent itemsets.
+9. Generate association rules.
+10. Analyze support, confidence, and lift.
+11. Visualize the top association rules.
+12. Extract business insights.
 
-## Exploratory Data Analysis
+## Apriori Algorithm
 
-The following factors were analyzed to understand customer churn:
+The Apriori algorithm is used to identify products that frequently occur together in customer transactions.
 
-* Churn distribution
-* Customer tenure
-* Monthly charges
-* Contract type
-* Payment method
-* Senior citizen status
+Three important measures are used:
 
-Visualizations were created using Matplotlib and Seaborn.
+### Support
 
-## Machine Learning Models
+Support represents how frequently an item or itemset appears in all transactions.
 
-Three classification models were implemented:
+### Confidence
 
-### 1. Logistic Regression
+Confidence represents the likelihood of purchasing the consequent product when the antecedent product or products are purchased.
 
-Used as a baseline classification model for predicting customer churn.
+### Lift
 
-### 2. Random Forest
+Lift measures how strongly two products are associated compared with their occurrence by chance.
 
-An ensemble learning algorithm used to capture complex relationships between customer features and churn.
+* **Lift > 1:** Positive association
+* **Lift = 1:** No significant association
+* **Lift < 1:** Negative association
 
-### 3. XGBoost
+## Key Findings
 
-A gradient boosting algorithm used for classification and predictive modeling.
+The analysis identified strong associations among several products.
 
-## Model Evaluation
+Some of the important product relationships discovered include:
 
-The models were evaluated using:
+* **DOLLY GIRL LUNCH BOX → SPACEBOY LUNCH BOX**
+* **CHARLOTTE BAG PINK POLKADOT → RED RETROSPOT CHARLOTTE BAG**
+* **RED RETROSPOT CHARLOTTE BAG → STRAWBERRY CHARLOTTE BAG**
+* **WOODLAND CHARLOTTE BAG → RED RETROSPOT CHARLOTTE BAG**
+* **PAPER CHAIN KIT 50'S CHRISTMAS → PAPER CHAIN KIT VINTAGE CHRISTMAS**
 
-* Accuracy
-* Recall
-* ROC-AUC
-* Classification Report
-* Confusion Matrix
-* ROC Curve
+These relationships indicate that customers purchasing certain products are also likely to purchase related products.
 
-## Feature Importance
+## Business Applications
 
-Random Forest and XGBoost feature importance were analyzed to identify which customer attributes have the greatest influence on churn prediction.
+The identified purchasing patterns can be used for:
+
+* Product recommendation systems
+* Cross-selling strategies
+* Bundle offers
+* Promotional campaigns
+* Store layout optimization
+* Inventory planning
+* Customer purchase analysis
 
 ## Project Structure
 
 ```text
-Customer-Churn-Prediction/
+Market-Basket-Analysis/
 │
-├── Customer_Churn_Prediction.ipynb
-├── README.md
-└── Dataset
+├── Market_Basket_Analysis.ipynb
+└── README.md
 ```
+
+## How to Run the Project
+
+1. Open the Jupyter Notebook in **Google Colab** or Jupyter Notebook.
+2. Upload the required dataset.
+3. Run the notebook cells sequentially.
+4. View the generated frequent itemsets, association rules, visualizations, and business insights.
+
+## Project Outcome
+
+This project demonstrates how **data mining and machine learning techniques** can be applied to retail transaction data to discover hidden relationships between products.
+
+The insights obtained from Market Basket Analysis can support businesses in making better decisions related to product recommendations, cross-selling, promotions, and inventory management.
+
+## Internship Project
+
+**Project:** Market Basket Analysis Using Apriori Algorithm
+**Domain:** Data Analytics / Machine Learning
+**Internship:** CodeCTechnologies
 
 ## Conclusion
 
-This project demonstrates how machine learning can be used to predict customer churn and identify patterns associated with customers leaving a service.
+The Market Basket Analysis project successfully applied the Apriori algorithm to retail transaction data and identified meaningful product associations using support, confidence, and lift.
 
-Logistic Regression, Random Forest, and XGBoost were trained and evaluated using multiple performance metrics. The analysis can help businesses identify customers who may be at risk of churn and support data-driven customer retention strategies.
+The project provides practical experience in **data preprocessing, exploratory data analysis, association rule mining, data visualization, and business insight generation**.
