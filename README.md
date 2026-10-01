@@ -112,5 +112,8 @@ The identified purchasing patterns can be used for:
 Market-Basket-Analysis/
 │
 ├── Market_Basket_Analysis.ipynb
-├── Online_Retail.csv
 └── README.md
+## Dataset
+
+The complete dataset is not included in this repository due to its large file size. The project was developed and tested using the complete dataset locally.
+
